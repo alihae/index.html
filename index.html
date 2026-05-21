@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Faraday Ultra Lab</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="module" src="three-engine.js"></script>
+  <script defer src="physics.js"></script>
+  <script defer src="effects.js"></script>
+  <script defer src="ui.js"></script>
+  <script defer src="app.js"></script>
+
+</head>
+
+<body>
+
+  <div id="loadingScreen">
+
+    <div class="loader-ring"></div>
+
+    <h1>FARADAY ULTRA LAB</h1>
+
+    <p>إعداد الأستاذ سيف الربيعي</p>
+
+    <span>الطالب علي حازم</span>
+
+  </div>
+
+  <main class="lab">
+
+    <section class="topbar">
+
+      <div>
+        <h2>مختبر فاراداي الواقعي</h2>
+        <p>Ultra Realistic Physics Simulation</p>
+      </div>
+
+      <div class="student-box">
+        <strong>علي حازم</strong>
+        <span>الأستاذ سيف الربيعي</span>
+      </div>
+
+    </section>
+
+    <section class="workspace">
+
+      <canvas id="webgl"></canvas>
+
+      <div class="hud">
+
+        <div class="panel">
+          <h3>Voltage</h3>
+          <strong id="voltageValue">12V</strong>
+        </div>
+
+        <div class="panel">
+          <h3>Current</h3>
+          <strong id="currentValue">2.4A</strong>
+        </div>
+
+        <div class="panel">
+          <h3>Capacitance</h3>
+          <strong id="capacitanceValue">0.08μF</strong>
+        </div>
+
+      </div>
+
+      <div class="control-box">
+
+        <label>المسافة بين الصفائح</label>
+
+        <input type="range" id="distanceRange" min="1" max="10" step="0.1" value="4.5">
+
+        <button id="startBtn">تشغيل المحاكاة</button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>
